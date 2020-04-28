@@ -3,18 +3,17 @@ $soft-red: hsl(0, 93%, 68%);
 $dark-grey-red: hsl(0, 6%, 24%);
 $gradient-one: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 88%));
 $gradient-two: linear-gradient(135deg, hsl(0, 61%, 81%), hsl(0, 59%, 65%));
-
-%font-shared {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
-}
-
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+%font-shared {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
 }
 
 body {
@@ -30,6 +29,17 @@ main {
     'head'
     'hero'
     'content';
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: 1.1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+      'head hero'
+      'content hero'
+      'content hero';
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+  }
 }
 
 main > header {
@@ -37,6 +47,14 @@ main > header {
   display: flex;
   align-items: center;
   padding: 25px;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 0 100px;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    padding: 0 170px;
+  }
 }
 
 main > #hero {
@@ -46,11 +64,23 @@ main > #hero {
   background-image: url(images/hero-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media only screen and (min-width: 1024px) {
+    background-image: url(images/hero-desktop.jpg);
+  }
 }
 
 main > #main-content {
   grid-area: content;
   background: $gradient-one;
+  @media only screen and (min-width: 1024px) {
+    background: none;
+    padding: 0 70px;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    padding: 0 140px;
+  }
 }
 
 #main-content-text {
@@ -73,16 +103,24 @@ main > #main-content {
     color: $desaturated-red;
     font-weight: 300;
   }
+
+  @media only screen and (min-width: 1024px) {
+    text-align: initial;
+    font-size: 3.5rem;
+  }
 }
 
 #main-description {
   margin-top: 30px;
   color: $desaturated-red;
   line-height: 1.5rem;
+
+  @media only screen and (min-width: 1024px) {
+    text-align: initial;
+  }
 }
 
 #email-container {
-  text-align: center;
   padding-top: 30px;
   padding-bottom: 100px;
 }
