@@ -3,6 +3,7 @@ $soft-red: hsl(0, 93%, 68%);
 $dark-grey-red: hsl(0, 6%, 24%);
 $gradient-one: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 88%));
 $gradient-two: linear-gradient(135deg, hsl(0, 61%, 81%), hsl(0, 59%, 65%));
+
 *,
 *::before,
 *::after {
@@ -38,6 +39,8 @@ main {
       'content hero'
       'content hero';
     background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
 }
@@ -158,6 +161,7 @@ form {
   background: $gradient-two;
   outline: none;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 
   .arrow {
     background-image: url(/images/icon-arrow.svg);
@@ -167,6 +171,10 @@ form {
     height: 50px;
     border: none;
   }
+}
+
+.btn-submit:hover {
+  background: $gradient-one;
 }
 
 ::placeholder {

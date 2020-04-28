@@ -24,6 +24,8 @@ main {
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas: "head hero" "content hero" "content hero";
     background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
 }
@@ -148,6 +150,7 @@ form {
   background: linear-gradient(135deg, #ecb1b1, #da7171);
   outline: none;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 .btn-submit .arrow {
   background-image: url(/images/icon-arrow.svg);
@@ -156,6 +159,10 @@ form {
   width: 70px;
   height: 50px;
   border: none;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, white, #ffc2c2);
 }
 
 ::placeholder {
