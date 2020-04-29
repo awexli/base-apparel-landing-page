@@ -18,15 +18,20 @@ main {
   grid-template-rows: 0.5fr 1fr 2fr;
   grid-template-areas: "head" "hero" "content";
 }
+@media only screen and (min-width: 768px) {
+  main {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-template-areas: "head" "hero" "hero" "content";
+  }
+}
 @media only screen and (min-width: 1024px) {
   main {
+    background-size: cover;
     grid-template-columns: 1.1fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas: "head hero" "content hero" "content hero";
-    background-image: url(./images/bg-pattern-desktop.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 }
 
@@ -41,7 +46,7 @@ main > header #logo-container {
   width: 158px;
   height: 33px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   main > header {
     padding: 0 100px;
   }
@@ -64,9 +69,15 @@ main > #hero {
   background: url(./images/hero-mobile.jpg) no-repeat;
   background-size: cover;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   main > #hero {
     background-image: url(./images/hero-desktop.jpg);
+    background-position: center;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  main > #hero {
+    background-position: unset;
   }
 }
 
@@ -75,7 +86,7 @@ main > #main-content {
   background: linear-gradient(135deg, white, #ffc2c2);
   position: relative;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   main > #main-content {
     background: none;
     padding: 0 70px;
@@ -112,7 +123,7 @@ main > #main-content {
   color: #ce9797;
   font-weight: 300;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   #coming-soon-text {
     text-align: initial;
     font-size: 3.5rem;
@@ -124,7 +135,7 @@ main > #main-content {
   color: #ce9797;
   line-height: 1.5rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   #main-description {
     text-align: initial;
   }
@@ -141,7 +152,7 @@ main > #main-content {
   color: #f96262;
   display: none;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   #email-error {
     text-align: initial;
     padding-left: 30px;
@@ -193,7 +204,7 @@ form {
   border: none;
   margin: auto;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .btn-submit {
     width: 90px;
   }
