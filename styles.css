@@ -179,6 +179,12 @@ form {
   background: transparent;
   text-indent: 30px;
   outline: none;
+  padding-right: 68px;
+}
+@media only screen and (min-width: 768px) {
+  #text-input-container input {
+    padding-right: 90px;
+  }
 }
 #text-input-container #submit-container {
   position: absolute;
