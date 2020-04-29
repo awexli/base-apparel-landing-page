@@ -143,8 +143,21 @@ main > #main-content {
   padding-bottom: 100px;
 }
 
+#email-error {
+  text-align: center;
+  margin-top: 16px;
+  color: $soft-red;
+  display: none;
+
+  @media only screen and (min-width: 1024px) {
+    text-align: initial;
+    padding-left: 30px;
+  }
+}
+
 form {
   padding: 0 40px;
+
   @media only screen and (min-width: 1400px) {
     padding: 0 70px 0 30px;
   }
@@ -211,6 +224,7 @@ form {
   right: 0;
   left: 0;
 }
+
 #attribution a {
   color: hsl(228, 45%, 44%);
 }
